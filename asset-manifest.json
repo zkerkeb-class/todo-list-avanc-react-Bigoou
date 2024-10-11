@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.4c3dc50b.css",
-    "main.js": "/static/js/main.e3b068f7.js",
-    "static/js/453.f8d955b7.chunk.js": "/static/js/453.f8d955b7.chunk.js",
-    "index.html": "/index.html",
-    "main.4c3dc50b.css.map": "/static/css/main.4c3dc50b.css.map",
-    "main.e3b068f7.js.map": "/static/js/main.e3b068f7.js.map",
-    "453.f8d955b7.chunk.js.map": "/static/js/453.f8d955b7.chunk.js.map"
+    "main.css": "/todo-list-avanc-react-Bigoou/static/css/main.4c3dc50b.css",
+    "main.js": "/todo-list-avanc-react-Bigoou/static/js/main.cb942ef8.js",
+    "static/js/453.f8d955b7.chunk.js": "/todo-list-avanc-react-Bigoou/static/js/453.f8d955b7.chunk.js",
+    "index.html": "/todo-list-avanc-react-Bigoou/index.html",
+    "main.4c3dc50b.css.map": "/todo-list-avanc-react-Bigoou/static/css/main.4c3dc50b.css.map",
+    "main.cb942ef8.js.map": "/todo-list-avanc-react-Bigoou/static/js/main.cb942ef8.js.map",
+    "453.f8d955b7.chunk.js.map": "/todo-list-avanc-react-Bigoou/static/js/453.f8d955b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c3dc50b.css",
-    "static/js/main.e3b068f7.js"
+    "static/js/main.cb942ef8.js"
   ]
 }
