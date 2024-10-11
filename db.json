@@ -1,0 +1,7 @@
+{
+    "tasks": [
+      { "id": 1, "text": "Apprendre React", "completed": false },
+      { "id": 2, "text": "Créer une Todo List", "completed": true },
+      { "id": 3, "text": "Maîtriser les hooks", "completed": false }
+    ]
+  }

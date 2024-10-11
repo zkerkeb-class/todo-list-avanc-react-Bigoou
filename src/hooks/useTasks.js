@@ -1,12 +1,17 @@
 import { useState, useEffect, useCallback } from 'react';
+import useFetch from './useFetch';
+
+const API_URL = 'https://my-json-server.typicode.com/Bigoou/todo-list-avanc-react-Bigoou/tasks';
 
 const useTasks = () => {
   const [tasks, setTasks] = useState([]);
+  const { data: initialTasks, loading, error } = useFetch(API_URL);
 
   useEffect(() => {
-    const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    setTasks(storedTasks);
-  }, []);
+    if (initialTasks) {
+      setTasks(initialTasks);
+    }
+  }, [initialTasks]);
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -26,7 +31,7 @@ const useTasks = () => {
     );
   }, []);
 
-  return { tasks, addTask, deleteTask, toggleTask };
+  return { tasks, addTask, deleteTask, toggleTask, loading, error };
 };
 
 export default useTasks;

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
-import useTasks from '../hooks/useTasks';
+import React, { useState, useMemo } from 'react';
+import { useTasks } from '../contexts/TasksContext';
 
 const TodoList = () => {
   const { tasks, addTask, deleteTask, toggleTask } = useTasks();
@@ -17,30 +17,21 @@ const TodoList = () => {
     }
   }, [tasks, filter]);
 
-  const handleAddTask = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (newTaskText.trim()) {
-        addTask(newTaskText);
-        setNewTaskText('');
-      }
-    },
-    [newTaskText, addTask]
-  );
+  const handleAddTask = (e) => {
+    e.preventDefault();
+    if (newTaskText.trim()) {
+      addTask(newTaskText);
+      setNewTaskText('');
+    }
+  };
 
-  const handleDeleteTask = useCallback(
-    (id) => {
-      deleteTask(id);
-    },
-    [deleteTask]
-  );
+  const handleDeleteTask = (id) => {
+    deleteTask(id);
+  };
 
-  const handleToggleTask = useCallback(
-    (id) => {
-      toggleTask(id);
-    },
-    [toggleTask]
-  );
+  const handleToggleTask = (id) => {
+    toggleTask(id);
+  };
 
   return (
     <div className="w-full max-w-2xl mx-auto">
