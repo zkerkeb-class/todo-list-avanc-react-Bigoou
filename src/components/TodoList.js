@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useTasks } from '../contexts/TasksContext';
 
 const TodoList = () => {
-  const { tasks, addTask, deleteTask, toggleTask } = useTasks();
+  const { tasks, addTask, deleteTask, toggleTask, loading, error } = useTasks();
   const [filter, setFilter] = useState('all');
   const [newTaskText, setNewTaskText] = useState('');
 
@@ -32,6 +32,9 @@ const TodoList = () => {
   const handleToggleTask = (id) => {
     toggleTask(id);
   };
+
+  if (loading) return <div>Chargement des tâches...</div>;
+  if (error) return <div>Erreur : {error}</div>;
 
   return (
     <div className="w-full max-w-2xl mx-auto">

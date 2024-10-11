@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import useFetch from './useFetch';
 
-const API_URL = 'https://my-json-server.typicode.com/Bigoou/todo-list-avanc-react-Bigoou/tasks';
+const API_URL = 'https://my-json-server.typicode.com/Bigoou/db-ynov-json/tasks';
 
 const useTasks = () => {
   const [tasks, setTasks] = useState([]);
